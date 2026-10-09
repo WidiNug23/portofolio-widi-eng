@@ -21,14 +21,14 @@ function LayoutContent({ children }) {
   const router = useRouter();
   const pathname = usePathname();
 
-  const navLinks = [
+const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/#projek", label: "Projects" },
-    { href: "/#sertifikat", label: "Certificates" },
-    { href: "/#lomba", label: "Competitions" },
-    { href: "/#organisasi", label: "Experience & Organization" },
-    { href: "/#pendidikan", label: "Education" },
-    { href: "/#kontak", label: "Contact" },
+    { href: "/#projects", label: "Projects" },         
+    { href: "/#certificates", label: "Certificates" },  
+    { href: "/#competitions", label: "Competitions" },  
+    { href: "/#experiences", label: "Experiences" },    
+    { href: "/#education", label: "Educations" },      
+    { href: "/#contact", label: "Contact" },           
     { href: "https://drive.google.com/file/d/1s-ildIIrPXcifuOSgcwJs12aC0Y7-vBh/view?usp=sharing", label: "Curriculum Vitae", external: true },
   ];
 

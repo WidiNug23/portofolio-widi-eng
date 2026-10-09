@@ -24,7 +24,6 @@ const SpinningClockIcon = () => (
       <p className="text-[#9be414]/70 text-[11px] font-black uppercase tracking-[0.3em] animate-pulse">
         Incoming Certificate
       </p>
-      {/* <p className="text-[10px] mt-1 text-gray-500 italic">Verifying achievements...</p> */}
     </div>
   </div>
 );
@@ -37,12 +36,12 @@ export default function SertifikatPage() {
   const sertifikatData = [
     {
       id: 1,
-      nama: "Sertifikat Kompetensi Pemrogram",
+      nama: "Programming Competence Certificate",
       deskripsi: "No. 62019 2514 5 00000439 2025",
       penerbit: "BNSP LSP Universitas Sebelas Maret",
       tahun: "2025-2028",
-      tingkat: "Nasional",
-      hasil: "Kompeten",
+      tingkat: "National",
+      hasil: "Competent",
       pdf_file: "/uploads/serkom_widi.pdf",
     },
     {
@@ -51,34 +50,34 @@ export default function SertifikatPage() {
       deskripsi: "Listening And Reading Official Institutional Score Report",
       penerbit: "Educational Testing Service.",
       tahun: "2025-2027",
-      tingkat: "Internasional",
+      tingkat: "International",
       hasil: "485",
       pdf_file: "/uploads/toeic widi.pdf",
     },
     {
       id: 3,
       nama: "Certificate of Appreciation 1st Place Web Design International Competition GAYATAMA 2024",
-      deskripsi: "Bersama dengan Tim Pokpokji berhasil memperoleh juara 1 Web desain International Competition GAYATAMA 2024 UNESA pada 9 Dokumenter 2024",
+      deskripsi: "Together with Team Pokpokji, successfully achieved 1st Place in the Web Design International Competition GAYATAMA 2024 UNESA on December 9, 2024.",
       penerbit: "Universitas Negeri Surabaya (UNESA)",
       tahun: "2024",
-      tingkat: "Internasional",
-      hasil: "Juara 1",
+      tingkat: "International",
+      hasil: "1st Place",
       pdf_file: "/uploads/130_Winner_GAYATAMA_compressed.pdf",
     },
     {
       id: 4,
-      nama: "Juara 3 - Olimpiade Vokasi Indonesia IX Tahun 2024 Bidang Web Technologies",
-      deskripsi: "Bersama dengan tim memperoleh juara 3 dalam gelaran OLIVIA IX Tahun 2024 di Makassar, Sulawesi Selatan pada bidang Web Technologies",
+      nama: "3rd Place - Indonesian Vocational Olympiad IX Year 2024 Web Technologies Category",
+      deskripsi: "Together with the team, achieved 3rd Place in the OLIVIA IX 2024 event held in Makassar, South Sulawesi in the Web Technologies category.",
       penerbit: "Forum Pendidikan Tinggi Vokasi Indonesia",
       tahun: "2024",
-      tingkat: "Nasional",
-      hasil: "Juara 3",
+      tingkat: "National",
+      hasil: "3rd Place",
       pdf_file: "/uploads/Sertifikat Juara (Emas, Perak dan Perunggu) OLIVIA IX_page-0069 (1).pdf",
     },
     {
       id: 5,
       nama: "[COMING SOON]",
-      deskripsi: "Sertifikat mendatang sedang dalam proses verifikasi atau pelaksanaan kompetisi.",
+      deskripsi: "Upcoming certificate currently undergoing verification or competition execution process.",
       isComingSoon: true,
     },
   ];
@@ -122,7 +121,7 @@ export default function SertifikatPage() {
       {/* HEADER SECTION */}
       <header className="max-w-4xl mx-auto mb-20 text-center">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">
-          Sertifikat
+          Certificates
         </h1>
         <div className="h-1.5 w-24 mx-auto rounded-full bg-[#9be414]"></div>
       </header>
@@ -130,7 +129,7 @@ export default function SertifikatPage() {
       {/* LIST SECTION */}
       {sertifikat.length === 0 ? (
         <div className="flex justify-center items-center h-40">
-           <p className="opacity-50 italic animate-pulse">Memuat data sertifikat...</p>
+           <p className="opacity-50 italic animate-pulse">Loading certificates data...</p>
         </div>
       ) : (
         <div className="max-w-6xl mx-auto grid grid-cols-1 gap-8 md:block md:[column-count:2] md:[column-gap:2rem] space-y-0 md:space-y-8">
@@ -181,22 +180,22 @@ export default function SertifikatPage() {
                             onClick={() => toggleExpand(s.id)} 
                             className="text-[9px] font-black text-[#9be414] uppercase tracking-widest hover:underline mt-2 block relative z-10"
                           >
-                            {isExpanded ? "Sembunyikan" : "Detail Deskripsi"}
+                            {isExpanded ? "Hide" : "Detailed Description"}
                           </button>
                         )}
                       </div>
 
-                      {/* FOOTER AREA: PENERBIT, HASIL (TANPA CARD, WARNA TETAP MENONJOL), & TOMBOL BUKA DOKUMEN */}
+                      {/* FOOTER AREA */}
                       <div className={`pt-4 border-t ${isDark ? 'border-gray-800' : 'border-gray-100'} mt-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4`}>
                         
                         <div className="flex items-center gap-6">
                           <div>
-                            <p className={`text-[9px] uppercase tracking-widest font-black mb-0.5 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Penerbit</p>
+                            <p className={`text-[9px] uppercase tracking-widest font-black mb-0.5 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Issuer</p>
                             <p className={`text-xs font-bold ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{s.penerbit || "-"}</p>
                           </div>
                           {s.hasil && (
                             <div>
-                              <p className={`text-[9px] uppercase tracking-widest font-black mb-0.5 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Hasil</p>
+                              <p className={`text-[9px] uppercase tracking-widest font-black mb-0.5 ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>Result</p>
                               <p className={`text-xs font-black italic ${isDark ? 'text-[#9be414]' : 'text-lime-700'}`}>
                                 {s.hasil}
                               </p>
@@ -215,7 +214,7 @@ export default function SertifikatPage() {
                                 : 'bg-black text-white hover:bg-gray-800'
                             }`}
                           >
-                            Buka Dokumen
+                            Open Document
                           </a>
                         )}
                       </div>

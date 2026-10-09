@@ -259,14 +259,14 @@ export default function Home() {
   const showCvButton = heroProgress > 0.88;
 
   const services = [
-    "Development Website",
-    "Videografi",
-    "Fotografi",
-    "Pembuatan Dokumen",
-    "Pengumpulan Data",
+    "Website Development",
+    "Videography",
+    "Photography",
+    "Document Creation",
+    "Data Collection",
   ];
 
-  const bioWords = "Lulusan Teknik Informatika UNS (IPK 3.81) yang menyukai perkembangan teknologi. Antusias dalam Development Website atau perangkat lunak, pembuatan alur sistem, dan manajemen data.".split(" ");
+  const bioWords = "An Informatics Engineering graduate from UNS (GPA 3.81) with a deep passion for technological advancements. Enthusiastic about website or software development, system workflow design, and data management.".split(" ");
 
   return (
     <>
@@ -313,7 +313,7 @@ export default function Home() {
                           }}
                         >
                           {word === "UNS" ? (
-                            <a href="https://uns.ac.id/id/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline decoration-blue-400/50 underline-offset-4 font-medium hover:text-blue-600 transition-colors">
+                            <a href="https://uns.ac.id/en/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline decoration-blue-400/50 underline-offset-4 font-medium hover:text-blue-600 transition-colors">
                               UNS
                             </a>
                           ) : word}
@@ -328,10 +328,10 @@ export default function Home() {
                     className="transition-all duration-500 text-xs sm:text-base font-medium mb-3 sm:mb-5"
                     style={{
                       opacity: showServicesTitle ? serviceTitleProgress : 0,
-                      transform: showServicesTitle ? `translateY(${(1 - serviceTitleProgress) * 15}px)` : "translateY(15px)"
+                      transform: showServicesTitle ? `translateY(${((1 - serviceTitleProgress)) * 15}px)` : "translateY(15px)"
                     }}
                   >
-                    Kebanyakan orang menghubungi saya saat mereka membutuhkan:
+                    Most people contact me when they need:
                   </div>
 
                   <div className="flex flex-wrap justify-center gap-2 sm:gap-3.5">
@@ -391,7 +391,7 @@ export default function Home() {
                       <span className="max-w-0 overflow-hidden whitespace-nowrap transition-all duration-300 ease-in-out group-hover:max-w-[60px] text-xs sm:text-base font-bold opacity-0 group-hover:opacity-100">
                         itae
                       </span>
-                    </span>
+                  </span>
                   </a>
                 </div>
 
@@ -406,10 +406,10 @@ export default function Home() {
         {/* CONTENT SECTION */}
         <section className="relative z-10 w-full rounded-t-[2rem] sm:rounded-t-[4rem] shadow-[0_-20px_40px_rgba(0,0,0,0.05)] py-10 sm:py-20 px-3 sm:px-10" style={{ backgroundColor: theme === "dark" ? "#0a0a0a" : "#f8fafc", color: theme === "dark" ? "#fff" : "#000" }}>
           
-          <div id="kontak" className="max-w-4xl mx-auto px-4 pt-4 pb-1 sm:pb-1">
+          <div id="contact" className="max-w-4xl mx-auto px-4 pt-4 pb-1 sm:pb-1">
             <RevealContainer>
               <h2 className={`text-2xl sm:text-4xl md:text-5xl font-extrabold mb-6 sm:mb-10 text-center font-poppins transition-all duration-300 ${highlightKontak ? "text-blue-500 scale-105" : ""}`}>
-                Let's Make Collaboration
+                Let's Collaborate
               </h2>
               
               <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 max-w-2xl mx-auto">
@@ -469,11 +469,11 @@ export default function Home() {
             </div>
           </section>
 
-          <div id="projek" className="pt-10 md:pt-20"><ProjekPage /></div>
-          <div id="sertifikat" className="pt-10 md:pt-20"><SertifikatPage /></div>
-          <div id="lomba" className="pt-10 md:pt-20"><LombaPage /></div>
-          <div id="organisasi" className="pt-10 md:pt-20"><OrganisasiPage /></div>
-          <div id="pendidikan" className="pt-10 md:pt-20"><PendidikanPage /></div>
+          <div id="projects" className="pt-10 md:pt-20"><ProjekPage /></div>
+          <div id="certificates" className="pt-10 md:pt-20"><SertifikatPage /></div>
+          <div id="competitions" className="pt-10 md:pt-20"><LombaPage /></div>
+          <div id="experiences" className="pt-10 md:pt-20"><OrganisasiPage /></div>
+          <div id="education" className="pt-10 md:pt-20"><PendidikanPage /></div>
         </section>
       </div>
 

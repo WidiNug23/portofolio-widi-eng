@@ -8,8 +8,8 @@ const projekData = [
     id: 5,
     tag: "Personal Project",
     judul:
-      "UPDATE V.1.2 - Manajemen Gudang Berbasis Web Menggunakan Next JS & Supabase",
-    deskripsi: `Sistem ini memudahkan penggunannya dalam management dan mengelola barang atau stock yang ada di dalam gudang. User akan diminta untuk mengelola kategori barang dan mengelola ketersediaan barang yang digunakan untuk produksi. Sistem ini menggunakan Next JS untuk Frontend and Backendnya. Untuk database menggunakan Supabase. Sistem ini akan terus dikembangkan agar pengelolaan barang di gudang akan semakin kompleks.`,
+      "UPDATE V.1.2 - Web-Based Warehouse Management System Using Next JS & Supabase",
+    deskripsi: `This system facilitates users in managing and organizing items or stock within the warehouse. Users are required to manage item categories and track inventory availability utilized for production. The system is built using Next JS for both Frontend and Backend, with Supabase as the database. Continuous development is underway to make warehouse inventory management increasingly complex and robust.`,
     link_demo:
       "https://sistem-gudang-ten.vercel.app/",
     link_github:
@@ -26,7 +26,7 @@ const projekData = [
     id: 1,
     tag: "Freelance Project",
     judul: "Company Profile Website",
-    deskripsi: `Terdapat beberapa role dalam website ini di antaranya yaitu pengunjung, admin, pimpinan, dan superadmin. Website ini dibuat untuk memaksimalkan pengenalan profile suatu company kepada khalayak ramai. Website ini dibangun menggunakan Laravel dan MySQL.`,
+    deskripsi: `Featuring multiple user roles including visitors, administrators, managers, and superadmins. This website was created to maximize company profile introduction to the general public. Built using Laravel and MySQL.`,
     link_demo: "https://danadipa.com/",
     images: JSON.stringify(["Screenshot 2026-04-19 195831.png"]),
   },
@@ -50,7 +50,7 @@ const projekData = [
     id: 11,
     tag: "Freelance Project",
     judul: "PECELANDAK - Pelayanan Cepat Langsung Digital Akuntabel",
-    deskripsi: `This website is linked to the Mejayan village profile website, providing online letter submission services, which are managed directly by village officials. Developed using Laravel 12 & Mysql Database`,
+    deskripsi: `PECELANDAK ( Pelayanan Cepat Langsung Digital Akuntabel or Fast, Direct, Digital, and Accountable Public Services) is linked to the Mejayan village profile website, providing online letter submission services, which are managed directly by village officials. Developed using Laravel 12 & MySQL Database.`,
     link_demo:
       "https://pecelandak.desamejayan.com/",
     images: JSON.stringify([
@@ -70,8 +70,8 @@ const projekData = [
     id: 12,
     tag: "Personal Project",
     judul:
-      "CareBot – Sistem Informasi Kebutuhan Nutrisi yang Dilengkapi Chatbot DialogFlow",
-    deskripsi: `Terpenuhinya kebutuhan nutrisi yang optimal sangat penting untuk menjaga kesehatan dan kualitas hidup setiap individu, terutama bagi remaja, lansia, ibu hamil, dan ibu menyusui. Terdapat juga kalkulator perhitungan nutrisi menggunakan rumus Mifflin st Jeor`,
+      "CareBot – Nutritional Needs Information System Equipped with Dialogflow Chatbot",
+    deskripsi: `Fulfilling optimal nutritional needs is essential for maintaining health and quality of life for every individual, especially adolescents, the elderly, pregnant women, and nursing mothers. It also features a nutrition calculation calculator using the Mifflin-St Jeor formula.`,
     link_demo: "https://carebot.tifpsdku.com",
     link_github: "",
     pdf_file: "uploads/[Lite] DOKUMENTASI TEKNIS CAREBOT (2).pdf",
@@ -89,7 +89,7 @@ const projekData = [
     id: 22,
     tag: "Internship Project",
     judul: "SIPBIBU – Sistem Pencegahan dan Penanganan Baby Blues Pada Ibu",
-    deskripsi: `SIPBIBU merupakan website yang dibuat sebagai upaya untuk menekan angka baby blues pada Ibu.\n\nFitur-fitur utama:\n• Kuesioner Model Suryani & EPDS\n• Forum Diskusi Ibu\n• Konsultasi Online Psikolog\n• Edukasi Video & Audio`,
+    deskripsi: `SIPBIBU (Sistem Pencegahan dan Penanganan Baby Blues Pada Ibu or Baby Blues Prevention and Handling System for Mothers) is a website created as an effort to reduce baby blues rates among mothers.\n\nKey Features:\n- Suryani Model & EPDS Questionnaires\n- Mothers Discussion Forum\n- Online Psychologist Consultation\n- Video & Audio Education`,
     link_demo: "https://sipbibu.tifpsdku.com",
     link_github: "",
     pdf_file:
@@ -103,8 +103,8 @@ const projekData = [
   {
     id: 3,
     tag: "Personal Project",
-    judul: "NopolIndo - Cek Plat Nomor Kendaraan dan Kode Wilayah Secara Online",
-    deskripsi: `NopolIndo memudahkan pengguna mencari informasi plat nomor kendaraan di Indonesia berdasarkan wilayah, provinsi, atau huruf secara cepat dan fleksibel.`,
+    judul: "NopolIndo - Online Vehicle License Plate & Regional Code Checker",
+    deskripsi: `NopolIndo allows users to quickly and flexibly search for Indonesian vehicle license plate information based on region, province, or letters.`,
     link_demo: "https://nopolindo.vercel.app/",
     link_github: "",
     images: JSON.stringify([
@@ -116,8 +116,8 @@ const projekData = [
   {
     id: 4,
     tag: "Personal Project",
-    judul: "Filterisasi Lowongan MagangHub",
-    deskripsi: `Sistem filterisasi cerdas menggunakan Python & Naive Bayes untuk menyaring lowongan magang berdasarkan kuota, lokasi, dan peluang lolos secara akurat.`,
+    judul: "MagangHub Internship Vacancy Filtering",
+    deskripsi: `An intelligent filtering system using Python & Naive Bayes to accurately filter internship vacancies based on quota, location, and acceptance probability.`,
     link_demo:
       "https://filterisasi-data-lowongan-magang.streamlit.app/",
     link_github:
@@ -128,8 +128,8 @@ const projekData = [
   {
     id: 6,
     tag: "Personal Project",
-    judul: "Hand Gesture",
-    deskripsi: `Sistem ini dibuat untuk mengatur kecerahan layar, volume suara, mengambil screenshot, dan melakukan play/pause video yang ada di laptop atau PC`,
+    judul: "Hand Gesture System Control",
+    deskripsi: `This system is designed to control screen brightness, audio volume, take screenshots, and play/pause videos on a laptop or PC using hand gestures.`,
     link_github:
       "https://github.com/WidiNug23/hand-gesture.git",
     pdf_file: "uploads/Penggunaan hand gesture.pdf",
@@ -138,8 +138,8 @@ const projekData = [
   {
     id: 7,
     tag: "Personal Project",
-    judul: "Video: Pengenalan CareBot",
-    deskripsi: `Projek produksi video pengenalan produk CareBot menggunakan CapCut dan Canva mencakup tahap penyusunan naskah hingga publikasi.`,
+    judul: "Video: CareBot Introduction",
+    deskripsi: `CareBot product introduction video production project using CapCut and Canva, covering everything from scriptwriting to publication.`,
     link_demo:
       "https://www.youtube.com/watch?v=lJcgUrdF3ws",
     link_github: "",
@@ -149,8 +149,8 @@ const projekData = [
     id: 8,
     tag: "Freelance Project",
     judul:
-      "Video: PENGAPLIKASIAN VIRTUALTOUR WONDERFUL KAMPUNG PESILAT BERBASIS VIRTUAL REALITY DI KABUPATEN MADIUN",
-    deskripsi: `Produksi konten video untuk mempromosikan wisata di Kabupaten Madiun. Pembuatan video dilakukan dengan mengambil footage, mengedit video dan melakukan dubbing.`,
+      "Video: APPLICATION OF VIRTUAL REALITY-BASED VIRTUAL TOUR 'WONDERFUL KAMPUNG PESILAT' IN MADIUN REGENCY",
+    deskripsi: `Video content production to promote tourism in Madiun Regency. The video creation involved footage capture, video editing, and professional voiceover dubbing.`,
     link_demo:
       "https://www.youtube.com/watch?v=7_L8LXGKcTI",
     link_github: "",
@@ -159,8 +159,8 @@ const projekData = [
   {
     id: 9,
     tag: "Freelance Project",
-    judul: "Video: Pameran Inovasi Teknologi di Era Revolusi Industri 5.0",
-    deskripsi: `Melakukan dokumentasi dan pengeditan video dalam acara Pameran Inovasi Teknologi Era Revolusi Industri 5.0.`,
+    judul: "Video: Technology Innovation Exhibition in the Era of Industrial Revolution 5.0",
+    deskripsi: `Documentation and video editing for the Technology Innovation Exhibition in the Industrial Revolution 5.0 Era event.`,
     link_demo:
       "https://www.youtube.com/watch?v=nHV9A8DgE8Q",
     link_github: "",
@@ -170,7 +170,7 @@ const projekData = [
     id: 10,
     tag: "Upcoming Project",
     judul: "Upcoming Project",
-    deskripsi: "Project baru yang sedang dalam tahap perencanaan dan pengembangan berikutnya.",
+    deskripsi: "New project currently in the planning and upcoming development phase.",
     images: JSON.stringify([]),
     isUpcoming: true,
   },
@@ -305,7 +305,7 @@ export default function ProjekPage() {
             isDark ? "neon-glow" : "text-slate-900"
           }`}
         >
-          PROJECTS
+          Projects
         </h1>
         <div className="h-1.5 w-16 mx-auto rounded-full bg-blue-500 mb-4" />
       </div>
@@ -431,7 +431,7 @@ export default function ProjekPage() {
                         {/* DESKRIPSI: overflow-y-auto (hanya muncul scrollbar jika teks melebihi max-h-[110px]) */}
                         <div className="max-h-[110px] overflow-y-auto pr-3 custom-scrollbar">
                           <p className={`text-xs sm:text-sm leading-relaxed whitespace-pre-line ${isDark ? "text-white/70" : "text-slate-600"}`}>
-                            {p.deskripsi || "Project sedang dalam tahap pengembangan."}
+                            {p.deskripsi || "Project is currently under development."}
                           </p>
                         </div>
                       </div>
@@ -453,7 +453,7 @@ export default function ProjekPage() {
                                 : "bg-slate-900 text-white hover:bg-blue-600"
                             }`}
                           >
-                            {youtubeID ? "Tonton Video" : "Website"}
+                            {youtubeID ? "Watch Video" : "Website"}
                           </a>
                         )}
 
@@ -477,7 +477,7 @@ export default function ProjekPage() {
                             onClick={() => setModalPDF(p.pdf_file)}
                             className="inline-flex items-center justify-center px-3.5 py-2 rounded-xl text-[9px] sm:text-[10px] font-black uppercase tracking-widest border border-red-500/40 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300"
                           >
-                            Dokumen
+                            Document
                           </button>
                         )}
                       </div>
@@ -545,7 +545,7 @@ export default function ProjekPage() {
         >
           <div className="relative w-full max-w-5xl h-[85vh] bg-white rounded-2xl overflow-hidden shadow-2xl flex flex-col" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between px-6 py-4 bg-slate-900 text-white">
-              <span className="text-xs font-bold tracking-wider uppercase">Dokumen Preview</span>
+              <span className="text-xs font-bold tracking-wider uppercase">Document Preview</span>
               <button
                 onClick={() => setModalPDF(null)}
                 className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center font-bold hover:bg-red-600 transition-colors"

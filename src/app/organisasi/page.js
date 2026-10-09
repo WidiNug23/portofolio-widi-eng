@@ -39,7 +39,7 @@ export default function OrganisasiPage() {
       jabatan: "Full-Stack Developer Freelance",
       tahun_masuk: "2026",
       tahun_keluar: "2026",
-      deskripsi: "Melakukan pengumpulan kebutuhan-kebutuhan website yang terdiri dari 3 role pengguna, fitur website (dokumentasi, portfolio,news), dan basis data untuk website. Melakukan implementasi perancangan ke dalam source code menggunakan framework Laravel. Melakukan deployment, testing, dan maintenance website.",
+      deskripsi: "Gathered website requirement specifications consisting of 3 user roles, website features (documentation, portfolio, news), and database architecture. Implemented the design into source code using the Laravel framework. Performed deployment, testing, and website maintenance.",
       file_path: "",
     },
     {
@@ -48,25 +48,25 @@ export default function OrganisasiPage() {
       jabatan: "Full-Stack Developer Freelance",
       tahun_masuk: "2025",
       tahun_keluar: "2026",
-      deskripsi: "Melakukan development website profile desa dan website pengajuan surat secara online. Membangun autentikasi dengan menggunakan token, validasi OTP, dan middleware role-base. membuat strategi SEO menggunakan Google Search Console",
+      deskripsi: "Developed the village profile website and online letter submission system. Built authentication using token-based access, OTP validation, and role-based middleware. Implemented SEO strategies using Google Search Console.",
       file_path: "",
     },
     {
       id: 3,
-      nama: "D3 Teknik Informatika UNS PSDKU",
-      jabatan: "Divisi Dokumentasi Prodi",
+      nama: "D3 Informatics Engineering UNS PSDKU",
+      jabatan: "Study Program Documentation Division",
       tahun_masuk: "2022",
       tahun_keluar: "2025",
-      deskripsi: "Melakukan dokumentasi kegiatan prodi menggunakan kamera DSLR atau Mirrorless. Melakukan pengeditan video yang berhubungan dengan kegiatan prodi menggunakan Capcut dan Canva. Melakukan penyimpanan hasil dokumentasi menggunakan Google Drive",
+      deskripsi: "Handled study program event documentation using DSLR or Mirrorless cameras. Edited program-related video content using CapCut and Canva. Managed documentation storage and archiving using Google Drive.",
       file_path: "",
     },
     {
       id: 4,
-      nama: "Himpunan Mahasiswa PSDKU UNS",
-      jabatan: "Staff Divisi Media Komunikasi",
+      nama: "UNS PSDKU Student Association",
+      jabatan: "Media & Communication Division Staff",
       tahun_masuk: "2023",
       tahun_keluar: "2024",
-      deskripsi: "Melakukan dokumentasi kegiatan himpunan menggunakan kamera DSLR atau Mirrorless. Melakukan pengeditan video dan foto yang berhubungan dengan kegiatan himpunan menggunakan Capcut dan Canva. Melakukan upload konten press release. Melakukan penyimpanan hasil dokumentasi menggunakan Google Drive.",
+      deskripsi: "Documented student association activities using DSLR or Mirrorless cameras. Edited video and photo content related to organizational events using CapCut and Canva. Published press release content and organized documentation archives using Google Drive.",
       file_path: "",
     },
     {
@@ -75,7 +75,7 @@ export default function OrganisasiPage() {
       jabatan: "Full Stack Developer",
       tahun_masuk: "2024",
       tahun_keluar: "2024",
-      deskripsi: "Melakukan perancangan dan pembuatan website bersama dengan tim menggunakan teknologi web modern.",
+      deskripsi: "Designed and built web applications collaboratively with the team using modern web technologies.",
       file_path: "",
     },
     {
@@ -84,7 +84,7 @@ export default function OrganisasiPage() {
       jabatan: "Multimedia Content Creator",
       tahun_masuk: "2025",
       tahun_keluar: "2025",
-      deskripsi: "Melakukan kegiatan dokumentasi kegiatan meliputi pengambilan gambar dan video serta melakukan pengeditan video.",
+      deskripsi: "Executed documentation activities including photography and videography capture as well as professional video editing.",
       file_path: "",
     },
     {
@@ -95,7 +95,7 @@ export default function OrganisasiPage() {
   ]);
 
   const [hovered, setHovered] = useState({});
-  const [clicked, setClicked] = useState({}); // Menyimpan state klik (true, false, atau undefined/null jika belum pernah diklik)
+  const [clicked, setClicked] = useState({}); 
   const [popupImage, setPopupImage] = useState(null);
 
   const handleMouseEnter = (id) => {
@@ -112,10 +112,8 @@ export default function OrganisasiPage() {
       let nextVal;
       
       if (currentVal === undefined || currentVal === null) {
-        // Jika belum pernah diklik, ambil kebalikan dari status hover saat itu
         nextVal = !hovered[id];
       } else {
-        // Jika sudah pernah diklik, tinggal dibalik statusnya
         nextVal = !currentVal;
       }
       return { ...prev, [id]: nextVal };
@@ -161,7 +159,7 @@ export default function OrganisasiPage() {
       {/* Header Section */}
       <header className="max-w-4xl mx-auto mb-12 sm:mb-16 md:mb-20 text-center">
         <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 sm:mb-4 tracking-tight ${isDark ? "neon-glow text-white" : "text-gray-900"}`}>
-          Pengalaman & Organisasi
+          Experiences & Organizations
         </h1>
         <div className={`h-1.5 w-20 sm:w-24 mx-auto rounded-full ${isDark ? 'bg-yellow-500 shadow-[0_0_15px_#f59e0b]' : 'bg-yellow-500'}`}></div>
       </header>
@@ -176,9 +174,6 @@ export default function OrganisasiPage() {
             const isHovered = !!hovered[o.id];
             const clickState = clicked[o.id];
 
-            // Logika Penentuan Expanded:
-            // Jika user sudah melakukan klik manual (clickState tidak undefined), ikuti nilai klik tersebut.
-            // Jika belum pernah diklik (clickState === undefined), ikuti pergerakan kursor (hover).
             const isExpanded = clickState !== undefined ? clickState : isHovered;
             const showLessActive = isExpanded;
 

@@ -69,16 +69,14 @@ function LombaItem({ lomba, isDark, setPopupImage }) {
 
   const textToShow = expanded ? lomba.deskripsi : lomba.deskripsi?.length > 180 ? lomba.deskripsi.substring(0, 180) + "..." : lomba.deskripsi;
 
-  // Interpolasi posisi horizontal foto dari tengah (0px) ke kanan (0px di flex layout)
-  // Saat progress 0 (di bawah layar), foto digeser ke tengah menggunakan persentase atau translate
-  const translateX = (1 - scrollProgress) * 180; // Bergeser dari tengah ke kanan saat scroll bertambah
+  const translateX = (1 - scrollProgress) * 180; 
   const textOpacity = scrollProgress;
   const textTranslateX = (1 - scrollProgress) * -40;
 
   return (
     <div ref={itemRef} className="relative py-12 lg:py-20 flex flex-col lg:flex-row gap-12 items-center justify-between min-h-[70vh]">
       
-      {/* LEFT SIDE: DETAILS (Muncul bertahap seiring scroll) */}
+      {/* LEFT SIDE: DETAILS */}
       <div 
         className="flex-1 flex flex-col justify-center transition-all duration-700 ease-out w-full"
         style={{
@@ -122,7 +120,7 @@ function LombaItem({ lomba, isDark, setPopupImage }) {
 
         {!lomba.isUpcoming && (
           <div className={`pt-4 border-t ${isDark ? 'border-white/5' : 'border-gray-200'} mt-auto`}>
-            <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'} font-medium`}>Penyelenggara:</p>
+            <p className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-400'} font-medium`}>Organizer:</p>
             <p className={`text-sm font-bold ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>{lomba.penyelenggara || "-"}</p>
           </div>
         )}
@@ -139,11 +137,11 @@ function LombaItem({ lomba, isDark, setPopupImage }) {
         )}
       </div>
 
-      {/* RIGHT SIDE: IMAGE SLIDER (Bergeser mulus dari tengah ke posisi kanan berdasarkan scroll) */}
+      {/* RIGHT SIDE: IMAGE SLIDER */}
       <div 
         className="w-full lg:w-[450px] flex items-center justify-center transition-all duration-300 ease-out"
         style={{
-          transform: `translateX(${window.innerWidth >= 1024 ? translateX : 0}px)`
+          transform: `translateX(${typeof window !== 'undefined' && window.innerWidth >= 1024 ? translateX : 0}px)`
         }}
       >
         {lomba.isUpcoming ? (
@@ -190,9 +188,9 @@ export default function LombaPage() {
   const lombaData = [
     {
       id: 1,
-      nama: "Olimpiade Vokasi Indonesia X Tahun 2025",
-      deskripsi: "Berkompetisi dalam ajang OLIVIA 2025 tingkat nasional dalam bidang web technologies yang diikuti mahasiswa vokasi seluruh Indonesia.",
-      tingkat: "Nasional",
+      nama: "Indonesian Vocational Olympiad X Year 2025",
+      deskripsi: "Competed in the national-level OLIVIA 2025 event in the field of web technologies, joined by vocational students across Indonesia.",
+      tingkat: "National",
       tahun: "2025",
       hasil: "Finalist",
       penyelenggara: "Forum Pendidikan Tinggi Vokasi Indonesia",
@@ -201,10 +199,10 @@ export default function LombaPage() {
     {
       id: 2,
       nama: "Web Design International Competition Gayatama UNESA 2024",
-      deskripsi: "Kompetisi desain web tingkat internasional yang memacu kreativitas dalam UI/UX dan fungsionalitas frontend.",
-      tingkat: "Internasional",
+      deskripsi: "An international-level web design competition that stimulates creativity in UI/UX and frontend functionality.",
+      tingkat: "International",
       tahun: "2024",
-      hasil: "Juara 1",
+      hasil: "1st Place",
       penyelenggara: "Universitas Negeri Surabaya",
       files: [
         { id: 1, filePath: "/uploads/width_800.png", fileType: "image" },
@@ -215,11 +213,11 @@ export default function LombaPage() {
     },
     {
       id: 3,
-      nama: "Olimpiade Vokasi Indonesia IX Tahun 2024",
-      deskripsi: "Berhasil meraih medali dalam kategori Web Technologies bersama tim yang diikuti seluruh mahasiswa vokasi Indonesia.",
-      tingkat: "Nasional",
+      nama: "Indonesian Vocational Olympiad IX Year 2024",
+      deskripsi: "Successfully won a medal in the Web Technologies category along with the team, participated by all vocational students in Indonesia.",
+      tingkat: "National",
       tahun: "2024",
-      hasil: "Juara 3 - Bidang Web Technologies",
+      hasil: "3rd Place - Web Technologies Category",
       penyelenggara: "Forum Pendidikan Tinggi Vokasi Indonesia",
       files: [
         { id: 1, filePath: "/uploads/width_750.png", fileType: "image" },
@@ -231,17 +229,17 @@ export default function LombaPage() {
     {
       id: 4,
       nama: "Canter 60th Anniversary Photo Contest",
-      deskripsi: "Ajang kreativitas fotografi nasional yang diselenggarakan oleh Mitsubishi Fuso.",
-      tingkat: "Nasional",
+      deskripsi: "A national photography creativity event organized by Mitsubishi Fuso.",
+      tingkat: "National",
       tahun: "2023",
-      hasil: "Nominasi Juara Favorit",
+      hasil: "Favorite Winner Nominee",
       penyelenggara: "Mitsubishi Fuso",
       files: [{ id: 1, filePath: "/uploads/width_800 (5).png", fileType: "image" }],
     },
     {
       id: 5,
       nama: "[COMING SOON]",
-      deskripsi: "Persiapan untuk kompetisi berikutnya sedang dilakukan.",
+      deskripsi: "Preparation for upcoming competitions is currently underway.",
       isUpcoming: true,
     },
   ];
@@ -257,7 +255,7 @@ export default function LombaPage() {
       {/* HEADER SECTION */}
       <header className="max-w-4xl mx-auto mb-20 text-center">
         <h1 className={`text-4xl md:text-6xl font-extrabold mb-4 tracking-tight ${isDark ? "neon-glow text-white" : "text-gray-900"}`}>
-          Lomba & Kompetisi
+          Competitions
         </h1>
         <div className={`h-1.5 w-24 mx-auto rounded-full ${isDark ? 'bg-purple-600 shadow-[0_0_15px_#a855f7]' : 'bg-purple-500'}`}></div>
       </header>

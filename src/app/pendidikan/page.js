@@ -7,25 +7,25 @@ const educationData = [
   {
     id: 1,
     nama: "Universitas Sebelas Maret",
-    jurusan: "D3 Teknik Informatika",
+    jurusan: "Informatics Engineering",
     tahun_masuk: "2022",
     tahun_lulus: "2025",
     nilai: "3.81",
     logo: "/uploads/Copy of Logo_UNS.png",
     deskripsi:
-      "Mendalami pengembangan perangkat lunak, basis data, dan infrastruktur IT. Fokus pada pengembangan web modern dan manajemen proyek TI.",
+      "Studying software development, databases, and IT infrastructure. Focused on modern web development and IT project management.",
     file_path: "",
   },
   {
     id: 2,
     nama: "SMA Negeri 1 Mejayan",
-    jurusan: "IPA",
+    jurusan: "Science Major",
     tahun_masuk: "2019",
     tahun_lulus: "2022",
     nilai: "88.13",
     logo: "/uploads/DgN0gGmUYAA6hu5.png",
     deskripsi:
-      "Menyelesaikan pendidikan menengah atas dengan fokus pada ilmu pengetahuan alam dan aktif dalam kegiatan organisasi sekolah.",
+      "Completed high school education with a focus on natural sciences and active participation in school organizational activities.",
     file_path: "",
   },
 ];
@@ -59,9 +59,6 @@ const SpinningClock = ({ theme }) => {
         <p className={`text-xs font-semibold uppercase tracking-[0.25em] ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
           Next Education
         </p>
-        {/* <p className={`text-xs mt-2 ${theme === "dark" ? "text-gray-500" : "text-gray-400"}`}>
-          Stay tuned for the next milestone
-        </p> */}
       </div>
     </div>
   );
@@ -122,7 +119,6 @@ function EducationStory({ education, theme }) {
 
   const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
-  // LOGO: Diperbesar dan posisi awal digeser lebih ke kanan (320px)
   const logoMoveProgress = isMobile ? 1 : Math.max(0, Math.min(1, (progress - 0.05) / 0.35));
   const logoTranslateX = isMobile ? 0 : (1 - logoMoveProgress) * 320; 
   const logoScale = isMobile ? 1 : 0.9 + logoMoveProgress * 0.1;
@@ -144,10 +140,9 @@ function EducationStory({ education, theme }) {
       <div className={`${isMobile ? "relative" : "sticky top-24 h-[80vh] flex items-center"}`}>
         <div className="w-full max-w-5xl mx-auto px-5 sm:px-8 md:px-10 lg:px-12">
           
-          {/* Grid diperketat gap-nya agar jarak logo & teks tidak terlalu jauh */}
           <div className="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-6 md:gap-8 items-center">
             
-            {/* KOLOM LOGO (Ukuran Diperbesar) */}
+            {/* LOGO COLUMN */}
             <div className="flex justify-center md:justify-start">
               <div
                 className="flex items-center justify-center transition-all duration-75"
@@ -167,10 +162,10 @@ function EducationStory({ education, theme }) {
               </div>
             </div>
 
-            {/* KOLOM KONTEN TEKS */}
+            {/* TEXT CONTENT COLUMN */}
             <div className="flex flex-col justify-center">
               
-              {/* YEAR & IPK */}
+              {/* YEAR & GPA */}
               <div className="min-h-[38px] sm:min-h-[42px] flex items-center mb-3 sm:mb-4" style={revealStyle(yearProgress)}>
                 <div className="flex flex-wrap gap-2.5">
                   <span className={`inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold ${
@@ -183,7 +178,7 @@ function EducationStory({ education, theme }) {
                     <span className={`inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-semibold ${
                       theme === "dark" ? "bg-gray-900 text-gray-300 border border-gray-800" : "bg-gray-50 text-gray-600 border border-gray-200"
                     }`}>
-                      IPK {education.nilai}
+                      GPA {education.nilai}
                     </span>
                   )}
                 </div>
@@ -199,7 +194,7 @@ function EducationStory({ education, theme }) {
               {/* MAJOR */}
               <div className="mt-2 sm:mt-3" style={revealStyle(majorProgress)}>
                 <p className={`text-sm sm:text-base md:text-lg font-medium ${theme === "dark" ? "text-gray-400" : "text-gray-500"}`}>
-                  {education.jurusan || "Jurusan belum ditentukan"}
+                  {education.jurusan || "Major not specified"}
                 </p>
               </div>
 
@@ -220,10 +215,10 @@ function EducationStory({ education, theme }) {
                         rel="noreferrer"
                         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-pink-500 hover:bg-pink-600 text-white text-sm font-semibold transition-colors shadow-lg"
                       >
-                        Lihat Dokumen <span>↗</span>
+                        View Document <span>↗</span>
                       </a>
                     ) : (
-                      <img src={fileUrl} alt={`Dokumen ${education.nama}`} className="max-w-sm rounded-xl border cursor-pointer" />
+                      <img src={fileUrl} alt={`Document ${education.nama}`} className="max-w-sm rounded-xl border cursor-pointer" />
                     )}
                   </div>
                 )}
@@ -245,11 +240,11 @@ export default function PendidikanPage() {
   return (
     <main className={`min-h-screen font-poppins transition-colors duration-500 pt-24 sm:pt-28 pb-20 ${theme === "dark" ? "text-gray-100" : "text-gray-900"}`}>
       
-      {/* HEADER UTAMA */}
+      {/* MAIN HEADER */}
       <section className="px-5 sm:px-8 md:px-12 lg:px-20 pb-6 sm:pb-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className={`text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
-            Pendidikan
+            Educations
           </h1>
           <div className="w-12 h-[3px] rounded-full bg-pink-500 mx-auto mt-4 sm:mt-6" />
         </div>

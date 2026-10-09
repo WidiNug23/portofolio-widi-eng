@@ -22,13 +22,13 @@ function LayoutContent({ children }) {
   const pathname = usePathname();
 
   const navLinks = [
-    { href: "/", label: "Beranda" },
-    { href: "/#projek", label: "Projek" },
-    { href: "/#sertifikat", label: "Sertifikat" },
-    { href: "/#lomba", label: "Lomba" },
-    { href: "/#organisasi", label: "Pengalaman & Organisasi" },
-    { href: "/#pendidikan", label: "Pendidikan" },
-    { href: "/#kontak", label: "Kontak" },
+    { href: "/", label: "Home" },
+    { href: "/#projek", label: "Projects" },
+    { href: "/#sertifikat", label: "Certificates" },
+    { href: "/#lomba", label: "Competitions" },
+    { href: "/#organisasi", label: "Experience & Organization" },
+    { href: "/#pendidikan", label: "Education" },
+    { href: "/#kontak", label: "Contact" },
     { href: "https://drive.google.com/file/d/1s-ildIIrPXcifuOSgcwJs12aC0Y7-vBh/view?usp=sharing", label: "Curriculum Vitae", external: true },
   ];
 
@@ -194,7 +194,7 @@ function LayoutContent({ children }) {
           : "bg-transparent py-5"
       }`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 w-full">
-          
+           
           <div className="flex items-center gap-3 sm:gap-4">
             <Link 
               href="/" 
@@ -212,7 +212,22 @@ function LayoutContent({ children }) {
             </Link>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Tombol Bendera Indonesia (Tanpa Background, Pindah Tab yang Sama) */}
+            <a
+              href="https://portofolio-widi-nugroho.vercel.app/"
+              className="p-1.5 rounded-lg opacity-80 hover:opacity-100 transition-all flex items-center justify-center"
+              title="Bahasa Indonesia"
+            >
+              <img 
+                src="https://flagcdn.com/w20/id.png" 
+                srcSet="https://flagcdn.com/w40/id.png 2x" 
+                width="22" 
+                alt="Bahasa Indonesia" 
+                className="rounded-[2px] shadow-sm object-cover"
+              />
+            </a>
+
             <button
               onClick={toggleTheme}
               className={`p-2 rounded-xl transition-all duration-300 ${
@@ -240,7 +255,7 @@ function LayoutContent({ children }) {
           ? "translate-y-0 pointer-events-auto" 
           : "-translate-y-full pointer-events-none"
       } ${theme === "dark" ? "bg-[#0b0b0b]" : "bg-[#f8fafc]"}`}>
-        
+         
         <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center my-auto">
           <div className="lg:col-span-6 hidden lg:flex items-center justify-center h-[420px] relative">
             <div 
@@ -336,7 +351,7 @@ function LayoutContent({ children }) {
 
         <div className="py-3 sm:py-4 px-2 sm:px-6 border-t border-gray-700/20 max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs">
           <p className={`text-center sm:text-left ${theme === "dark" ? "text-gray-400 font-medium" : "text-gray-600 font-medium"}`}>
-            © {new Date().getFullYear()} Widi Nugroho. Semua Hak Cipta Dilindungi.
+            © {new Date().getFullYear()} Widi Nugroho. All Rights Reserved.
           </p>
           <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6 font-bold">
             <a href="https://github.com/WidiNug23" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">GitHub</a>
@@ -355,7 +370,7 @@ function LayoutContent({ children }) {
         theme === "dark" ? "bg-gray-950 border-gray-800 text-gray-300" : "bg-gray-50 border-gray-200 text-gray-700"
       }`}>
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-12 pb-12 md:pb-16 border-b border-gray-700/20">
-          
+           
           <div className="flex flex-col space-y-2">
             <h2 className={`text-2xl font-semibold tracking-tighter ${
               theme === "dark" ? "text-white" : "text-gray-900"
@@ -404,7 +419,7 @@ function LayoutContent({ children }) {
 
         <div className="max-w-7xl mx-auto px-6 pt-6 md:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
           <p className={theme === "dark" ? "text-gray-500" : "text-gray-500"}>
-            © {new Date().getFullYear()} Widi Nugroho. Hak Cipta Dilindungi.
+            © {new Date().getFullYear()} Widi Nugroho. All Rights Reserved.
           </p>
         </div>
       </footer>
@@ -439,7 +454,7 @@ function LayoutContent({ children }) {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="id" className="scroll-smooth hide-scrollbar">
+    <html lang="en" className="scroll-smooth hide-scrollbar">
       <ThemeProvider>
         <LayoutContent>{children}</LayoutContent>
       </ThemeProvider>
